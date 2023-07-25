@@ -1,0 +1,53 @@
+/* Удалите поля и отступы из списка */
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Стиль элементов списка */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  
+    /* сделайте элементы списка невыбираемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Установить все нечетные элементы списка в другой цвет (зебра) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Более темный фон-цвет при наведении */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Добавить "checked" отметить при нажатии на кнопку */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
